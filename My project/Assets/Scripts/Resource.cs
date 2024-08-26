@@ -7,7 +7,7 @@ public class Resource : MonoBehaviour
     // Start is called before the first frame update
 
     public int resourceAmount;
-    [SerializeField] private string resourceType;
+    public string resourceType;
 
     void Start()
     {
