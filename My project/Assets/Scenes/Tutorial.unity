@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 3611714}
   - component: {fileID: 3611713}
   - component: {fileID: 3611715}
+  - component: {fileID: 3611716}
   m_Layer: 5
   m_Name: Village Button
   m_TagString: Untagged
@@ -257,6 +258,33 @@ MonoBehaviour:
           m_StringArgument: village
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3611716}
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: RemoveResource
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3611716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3611711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3dbaee4b5d579847b0d961f7dac82ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodCost: 200
+  woodCost: 0
+  crystalCost: 0
 --- !u!1 &34297255
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +297,7 @@ GameObject:
   - component: {fileID: 34297258}
   - component: {fileID: 34297257}
   - component: {fileID: 34297259}
+  - component: {fileID: 34297260}
   m_Layer: 5
   m_Name: Wood Button
   m_TagString: Untagged
@@ -391,6 +420,33 @@ MonoBehaviour:
           m_StringArgument: tree
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 34297260}
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: RemoveResource
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &34297260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34297255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3dbaee4b5d579847b0d961f7dac82ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodCost: 0
+  woodCost: 0
+  crystalCost: 15
 --- !u!1001 &43606513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -544,6 +600,7 @@ GameObject:
   - component: {fileID: 115003176}
   - component: {fileID: 115003175}
   - component: {fileID: 115003177}
+  - component: {fileID: 115003178}
   m_Layer: 5
   m_Name: Trap Button
   m_TagString: Untagged
@@ -666,6 +723,33 @@ MonoBehaviour:
           m_StringArgument: trap
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 115003178}
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: RemoveResource
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &115003178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115003173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3dbaee4b5d579847b0d961f7dac82ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodCost: 0
+  woodCost: 15
+  crystalCost: 0
 --- !u!1001 &124301001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2209,6 +2293,7 @@ GameObject:
   - component: {fileID: 960490842}
   - component: {fileID: 960490841}
   - component: {fileID: 960490843}
+  - component: {fileID: 960490844}
   m_Layer: 5
   m_Name: Crystal Button
   m_TagString: Untagged
@@ -2331,6 +2416,33 @@ MonoBehaviour:
           m_StringArgument: crystal
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 960490844}
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: RemoveResource
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &960490844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960490839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3dbaee4b5d579847b0d961f7dac82ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodCost: 0
+  woodCost: 0
+  crystalCost: 15
 --- !u!1001 &1004983804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3256,6 +3368,7 @@ GameObject:
   - component: {fileID: 1383600423}
   - component: {fileID: 1383600422}
   - component: {fileID: 1383600424}
+  - component: {fileID: 1383600425}
   m_Layer: 5
   m_Name: Human Button
   m_TagString: Untagged
@@ -3378,6 +3491,33 @@ MonoBehaviour:
           m_StringArgument: worker
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1383600425}
+        m_TargetAssemblyTypeName: ShopButton, Assembly-CSharp
+        m_MethodName: RemoveResource
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1383600425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383600420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3dbaee4b5d579847b0d961f7dac82ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodCost: 15
+  woodCost: 0
+  crystalCost: 0
 --- !u!1 &1388957801
 GameObject:
   m_ObjectHideFlags: 0
@@ -5088,7 +5228,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41419782ebc1c51428033d4958cb8f85, type: 3}
---- !u!1001 &7415540248288156821
+--- !u!1001 &6048420525540766446
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -5096,55 +5236,55 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.37
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 7.19
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6368209725418714604, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 3840566292096762499, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8137205888033299676, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+    - target: {fileID: 5782285278357947063, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
       propertyPath: m_Name
-      value: Trap
+      value: Village
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: abf94f3b8b458b146a57409eed0acc38, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 52f9d0879738aca40ab7e0d4817175ce, type: 3}
 --- !u!1001 &7865534118762973532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5275,4 +5415,4 @@ SceneRoots:
   - {fileID: 1032495159}
   - {fileID: 1576474530}
   - {fileID: 1590495958}
-  - {fileID: 7415540248288156821}
+  - {fileID: 6048420525540766446}
