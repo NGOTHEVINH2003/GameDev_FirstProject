@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ResourceManager : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class ResourceManager : MonoBehaviour
     public TMP_Text crystalCount;
 
     public static ResourceManager instance;
+
+    public int workersSacrificed;
+    public TMP_Text sacrificedText;
+    public int sacrificedGoal;
 
     private void Awake()
     {
@@ -47,6 +52,18 @@ public class ResourceManager : MonoBehaviour
         {
             crystal += amount;
             crystalCount.text = crystal.ToString();
+        }
+    }
+
+    public void SaccrificeWorker()
+    {
+        workersSacrificed++;
+        sacrificedText.text = workersSacrificed + "/" + sacrificedGoal;
+
+        if (workersSacrificed >= sacrificedGoal)
+        {
+            print("Won!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

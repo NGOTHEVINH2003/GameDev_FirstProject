@@ -14,10 +14,12 @@ public class Worker : MonoBehaviour
     float nextCollectTime;
     [SerializeField]private int collectAmount;
 
+
+    GameObject bloodAlter;
     // Start is called before the first frame update
     void Start()
     {
-        
+        bloodAlter = GameObject.FindGameObjectWithTag("Altar");
     }
 
     // Update is called once per frame
@@ -32,6 +34,12 @@ public class Worker : MonoBehaviour
         }
         else
         {
+
+            if(Vector3.Distance(transform.position, bloodAlter.transform.position) <= 1f)
+            {
+                ResourceManager.instance.SaccrificeWorker();
+                Destroy(gameObject);
+            }
             Collider2D col = Physics2D.OverlapCircle(transform.position, collectDistance, resLayer);
             if(col != null && currentResource == null)
             {
