@@ -13,13 +13,14 @@ public class Worker : MonoBehaviour
     [SerializeField]private float timeBetweenCollect;
     float nextCollectTime;
     [SerializeField]private int collectAmount;
+    [SerializeField] private GameObject ResourcePopUp;
 
-
-    GameObject bloodAlter;
+    GameObject bloodAltar;
+    public float distanceToAltar;
     // Start is called before the first frame update
     void Start()
     {
-        bloodAlter = GameObject.FindGameObjectWithTag("Altar");
+        bloodAltar = GameObject.FindGameObjectWithTag("Altar");
     }
 
     // Update is called once per frame
@@ -35,7 +36,7 @@ public class Worker : MonoBehaviour
         else
         {
 
-            if(Vector3.Distance(transform.position, bloodAlter.transform.position) <= 1f)
+            if(Vector3.Distance(transform.position, bloodAltar.transform.position) <= distanceToAltar)
             {
                 ResourceManager.instance.SaccrificeWorker();
                 Destroy(gameObject);
@@ -54,6 +55,7 @@ public class Worker : MonoBehaviour
             {
                 if(Time.time > nextCollectTime)
                 {
+                    Instantiate(ResourcePopUp, transform.position, Quaternion.identity);
                     nextCollectTime = Time.time + timeBetweenCollect;
                     currentResource.resourceAmount -= collectAmount;
                     ResourceManager.instance.AddResource(currentResource.resourceType, collectAmount);

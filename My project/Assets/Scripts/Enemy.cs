@@ -49,5 +49,12 @@ public class Enemy : MonoBehaviour
             Instantiate(bloodVfx, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+
+        if(collision.tag == "Human")
+        {
+            Destroy(gameObject);
+            Instantiate(bloodVfx, transform.position, Quaternion.identity);
+            Destroy(collision.gameObject);
+        }
     }
 }

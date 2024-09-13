@@ -162,7 +162,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1642242609214539638, guid: 08e0427e34fb7144e852d55d0648cfec, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -297,3 +297,5 @@ MonoBehaviour:
   collectDistance: 0.2
   timeBetweenCollect: 2
   collectAmount: 5
+  ResourcePopUp: {fileID: 7591360126410490250, guid: cf833323d377b4641957e64d1bf1a564, type: 3}
+  distanceToAltar: 1.5
