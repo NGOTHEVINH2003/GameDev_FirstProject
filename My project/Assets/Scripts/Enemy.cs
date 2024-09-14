@@ -11,9 +11,12 @@ public class Enemy : MonoBehaviour
     Vector3 currentTarget;
 
     public GameObject bloodVfx;
+
+    private Animator camAnim;
     // Start is called before the first frame update
     void Start()
     {
+        camAnim = Camera.main.GetComponent<Animator>();
         currentTarget = getRandPos();
     }
 
@@ -45,6 +48,7 @@ public class Enemy : MonoBehaviour
 
         if(collision.tag == "Trap")
         {
+            camAnim.SetTrigger("shake");
             Destroy(collision.gameObject);
             Instantiate(bloodVfx, transform.position, Quaternion.identity);
             Destroy(gameObject);

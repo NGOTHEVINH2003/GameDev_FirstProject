@@ -17,9 +17,12 @@ public class Worker : MonoBehaviour
 
     GameObject bloodAltar;
     public float distanceToAltar;
+    private AudioSource source;
+    public GameObject deathSound;
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         bloodAltar = GameObject.FindGameObjectWithTag("Altar");
     }
 
@@ -28,7 +31,7 @@ public class Worker : MonoBehaviour
     {
         if (isSelected)
         {
-            //when user is selected 
+            //when user is selected move accordingly with mouse.
             Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0;
             transform.position = mousePos;
@@ -38,6 +41,7 @@ public class Worker : MonoBehaviour
 
             if(Vector3.Distance(transform.position, bloodAltar.transform.position) <= distanceToAltar)
             {
+                Instantiate(deathSound);
                 ResourceManager.instance.SaccrificeWorker();
                 Destroy(gameObject);
             }
@@ -67,6 +71,8 @@ public class Worker : MonoBehaviour
 
     private void OnMouseDown()
     {
+        //play pop sound whenever select worker.
+        source.Play();
         isSelected = true;
     }
 

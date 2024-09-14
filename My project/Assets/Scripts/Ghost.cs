@@ -6,10 +6,12 @@ public class Ghost : MonoBehaviour
 {
 
     public GameObject objectToSpawn;
+    private Animator camAnim;
+    public GameObject buildEffect;
     // Start is called before the first frame update
     void Start()
     {
-        
+        camAnim = Camera.main.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,8 @@ public class Ghost : MonoBehaviour
         transform.position = mousePos;
         if (Input.GetMouseButtonDown(0))
         {
+            Instantiate(buildEffect, transform.position, Quaternion.identity);
+            camAnim.SetTrigger("shake");
             Instantiate(objectToSpawn, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
